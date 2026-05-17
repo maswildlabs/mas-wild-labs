@@ -1,0 +1,207 @@
+:root, [data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #1A1A1A !important; 
+  --md-primary-bg-color: #1A1A1A !important; 
+  --md-accent-fg-color: #98BF92 !important; 
+  --md-default-bg-color: #1A1A1A !important; 
+  --md-default-fg-color: #C0C0C0 !important; 
+  --md-default-fg-color--light: #C0C0C0 !important;
+  --md-default-fg-color--dark: #C0C0C0 !important;
+  --md-typeset-color: #C0C0C0 !important; 
+  --md-typeset-a-color: #98BF92 !important; 
+}
+
+.md-nav, .md-sidebar, body, .md-container {
+  background-color: #1A1A1A !important;
+}
+
+.md-typeset, .md-content, article {
+  color: #C0C0C0 !important;
+}
+
+.md-typeset p strong {
+  font-family: 'JetBrains Mono', monospace !important;
+  color: #98BF92 !important;       
+  font-weight: 700 !important;
+  letter-spacing: 0.02em;
+}
+
+.md-typeset p {
+  color: #C0C0C0 !important;       
+}
+
+.md-typeset p:has(strong) {
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 0.85rem !important;   
+  line-height: 1.6 !important;
+}
+
+/* Header Text Anchor Alignments */
+.md-header__title {
+  margin-left: 0.5rem !important;
+  display: flex !important;
+  align-items: center;
+}
+
+.md-header__ellipsis {
+  font-family: 'JetBrains Mono', monospace !important;
+  color: #98BF92 !important; 
+  font-weight: 800;
+  font-size: 1.1rem;
+  letter-spacing: 0.05rem;
+  text-transform: uppercase;
+  white-space: nowrap; 
+}
+
+.md-header__ellipsis::before {
+  content: "SYS_ID // MAS WILD LABS" !important;
+  color: #98BF92 !important;
+}
+
+/* Content Area Workspace Header Titles */
+.md-typeset h1, #systems-overview-mas-wild-labs {
+  font-family: 'JetBrains Mono', monospace !important;
+  color: #98BF92 !important; 
+  font-weight: 700 !important;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgba(152, 191, 146, 0.3) !important; 
+  padding-bottom: 0.5rem;
+}
+
+.md-typeset h2, .md-typeset h3, .md-typeset h4 {
+  color: #C0C0C0 !important;
+}
+
+/* --- THE HOME BUTTON FIX --- */
+
+/* 1. Format the visible Home Link */
+.md-sidebar--primary .md-nav__list > .md-nav__item:first-child .md-nav__link {
+  font-family: 'JetBrains Mono', monospace !important;
+  color: #98BF92 !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;
+  font-size: 0.7rem !important;
+  padding-left: 0.75rem !important;
+  margin-bottom: 0.2rem !important;
+  display: block !important;
+}
+
+/* 2. Handle the Active State Border for the Home link properly */
+.md-sidebar--primary .md-nav__list > .md-nav__item:first-child.md-nav__item--active > .md-nav__link,
+.md-sidebar--primary .md-nav__list > .md-nav__item:first-child .md-nav__link--active {
+  border-left: 3px solid #98BF92 !important;
+  padding-left: calc(0.75rem - 3px) !important;
+}
+
+/* 3. STRICTLY NUKE ALL NESTED DUPLICATES UNDER THE FIRST NAV ITEM */
+.md-sidebar--primary .md-nav__list > .md-nav__item:first-child ul,
+.md-sidebar--primary .md-nav__list > .md-nav__item:first-child nav,
+.md-sidebar--primary .md-nav__list > .md-nav__item:first-child .md-nav__list,
+.md-sidebar--primary .md-nav__list > .md-nav__item:first-child .md-nav__link + .md-nav__link {
+  display: none !important;
+}
+
+/* REMOVE STRAY INNER SIDEBAR COPIES OF SITE_NAME BANNER */
+.md-sidebar--primary .md-nav__title {
+  display: none !important;
+}
+
+/* Category Title Bars Style Rules */
+.md-nav__item--nested > .md-nav__link,
+.md-nav__title[for="__drawer"], 
+.md-nav__link--caption,
+.md-sidebar--secondary .md-nav__title {
+  color: #98BF92 !important;        
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.08em !important;    
+  font-size: 0.7rem !important;     
+  padding-top: 1.2rem !important;
+  font-family: 'JetBrains Mono', monospace !important; 
+  background: transparent !important;
+  display: flex !important;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.md-nav__item--nested > .md-nav__link .md-nav__icon {
+  color: #C0C0C0 !important;
+  display: block !important;
+  transform: scale(0.8);
+}
+
+.md-nav__item, .md-nav__link, .md-nav__link--active,
+.md-sidebar--secondary .md-nav__link, .md-nav__item--active {
+  background: transparent !important;
+  background-image: none !important;
+}
+
+/* Individual File Links Sub-Tree Style Rules */
+.md-nav__list .md-nav__item .md-nav__link {
+  color: #C0C0C0 !important;        
+  font-size: 0.8rem !important;     
+  font-weight: 400 !important;      
+  font-family: 'Roboto', sans-serif !important;
+  text-transform: none !important;  
+  letter-spacing: normal !important;
+  padding-left: 0.75rem !important;
+  margin-top: 0.2rem !important;
+  display: block !important;
+}
+
+.md-nav__list .md-nav__item .md-nav__link:hover {
+  color: #98BF92 !important;        
+}
+
+.md-nav__item--active > .md-nav__link:not(.md-nav__link--index) {
+  color: #98BF92 !important;        
+  font-weight: 600 !important;
+  border-left: 3px solid #98BF92 !important; 
+  padding-left: 12px !important;
+}
+
+.md-icon, .md-nav__icon, .md-search__icon {
+  color: #C0C0C0 !important;
+}
+
+.md-footer {
+  background-color: #1A1A1A !important;
+}
+
+.md-footer-meta {
+  background-color: #1A1A1A !important;
+  border-top: 1px solid rgba(192, 192, 192, 0.1) !important; 
+  padding: 2.5rem 1rem !important; 
+}
+
+.md-footer-meta__inner, .md-copyright {
+  color: #C0C0C0 !important; 
+  font-family: 'JetBrains Mono', monospace !important; 
+  font-size: 0.65rem !important;
+  letter-spacing: 0.03em;
+  line-height: 1.6 !important;
+  text-align: center !important; 
+  justify-content: center !important;
+}
+
+.md-copyright a {
+  color: #98BF92 !important; 
+  text-decoration: none;
+}
+.md-copyright a:hover {
+  text-decoration: underline;
+}
+
+/* Kill Tracking Duplicates Under All Folder Sections */
+.md-nav__list .md-nav__item--index {
+  display: none !important;
+}
+
+/* PURGE ALL STRAY DEFAULT EXTRA HEADER ELEMENTS */
+.md-header__button.md-logo,
+.md-header__button[for="__drawer"],
+.md-search,
+.md-header__topic {
+  display: none !important;
+}
